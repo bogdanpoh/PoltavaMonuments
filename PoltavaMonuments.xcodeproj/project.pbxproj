@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F7C96094278307BD004CE775 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C96093278307BD004CE775 /* ImageLoader.swift */; };
+		F7C96099278319AD004CE775 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C96098278319AD004CE775 /* ImageCache.swift */; };
+		F7F9ABC22781B62C00AADF34 /* PoltavaMonuments WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7F9ABC12781B62C00AADF34 /* PoltavaMonuments WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F7F9ABC82781B62C00AADF34 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F9ABC62781B62C00AADF34 /* Interface.storyboard */; };
+		F7F9ABCA2781B62D00AADF34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F9ABC92781B62D00AADF34 /* Assets.xcassets */; };
+		F7F9ABD02781B62E00AADF34 /* PoltavaMonuments WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7F9ABCF2781B62E00AADF34 /* PoltavaMonuments WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F7F9ABD52781B62E00AADF34 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ABD42781B62E00AADF34 /* InterfaceController.swift */; };
+		F7F9ABD72781B62E00AADF34 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ABD62781B62E00AADF34 /* ExtensionDelegate.swift */; };
+		F7F9ABD92781B62E00AADF34 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ABD82781B62E00AADF34 /* NotificationController.swift */; };
+		F7F9ABDB2781B62E00AADF34 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9ABDA2781B62E00AADF34 /* ComplicationController.swift */; };
+		F7F9ABDD2781B62F00AADF34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F9ABDC2781B62F00AADF34 /* Assets.xcassets */; };
+		F7F9AC0A2781B6C600AADF34 /* MainTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9AC092781B6C600AADF34 /* MainTable.swift */; };
+		F7F9AC0D2781F22700AADF34 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9AC0C2781F22700AADF34 /* NetworkManager.swift */; };
+		F7F9AC102781F95000AADF34 /* Monument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F9AC0F2781F95000AADF34 /* Monument.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7F9ABC32781B62C00AADF34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7F9ABB72781B62C00AADF34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7F9ABC02781B62C00AADF34;
+			remoteInfo = "PoltavaMonuments WatchKit App";
+		};
+		F7F9ABD12781B62E00AADF34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7F9ABB72781B62C00AADF34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7F9ABCE2781B62E00AADF34;
+			remoteInfo = "PoltavaMonuments WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7F9ABFB2781B62F00AADF34 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F7F9ABD02781B62E00AADF34 /* PoltavaMonuments WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7F9ABFF2781B62F00AADF34 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F7F9ABC22781B62C00AADF34 /* PoltavaMonuments WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F7C96093278307BD004CE775 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		F7C96098278319AD004CE775 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F7F9ABBD2781B62C00AADF34 /* PoltavaMonuments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoltavaMonuments.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7F9ABC12781B62C00AADF34 /* PoltavaMonuments WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PoltavaMonuments WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7F9ABC72781B62C00AADF34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F7F9ABC92781B62D00AADF34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7F9ABCF2781B62E00AADF34 /* PoltavaMonuments WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PoltavaMonuments WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7F9ABD42781B62E00AADF34 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		F7F9ABD62781B62E00AADF34 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		F7F9ABD82781B62E00AADF34 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F7F9ABDA2781B62E00AADF34 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F7F9ABDC2781B62F00AADF34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7F9ABDE2781B62F00AADF34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7F9ABDF2781B62F00AADF34 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F7F9AC092781B6C600AADF34 /* MainTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTable.swift; sourceTree = "<group>"; };
+		F7F9AC0C2781F22700AADF34 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F7F9AC0F2781F95000AADF34 /* Monument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monument.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7F9ABCC2781B62E00AADF34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7F9ABB62781B62C00AADF34 = {
+			isa = PBXGroup;
+			children = (
+				F7F9ABC52781B62C00AADF34 /* PoltavaMonuments WatchKit App */,
+				F7F9ABD32781B62E00AADF34 /* PoltavaMonuments WatchKit Extension */,
+				F7F9ABBE2781B62C00AADF34 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F7F9ABBE2781B62C00AADF34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9ABBD2781B62C00AADF34 /* PoltavaMonuments.app */,
+				F7F9ABC12781B62C00AADF34 /* PoltavaMonuments WatchKit App.app */,
+				F7F9ABCF2781B62E00AADF34 /* PoltavaMonuments WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7F9ABC52781B62C00AADF34 /* PoltavaMonuments WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9ABC62781B62C00AADF34 /* Interface.storyboard */,
+				F7F9ABC92781B62D00AADF34 /* Assets.xcassets */,
+			);
+			path = "PoltavaMonuments WatchKit App";
+			sourceTree = "<group>";
+		};
+		F7F9ABD32781B62E00AADF34 /* PoltavaMonuments WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9AC0E2781F36F00AADF34 /* Services */,
+				F7F9AC112781F95800AADF34 /* Models */,
+				F7F9AC0B2781F17D00AADF34 /* Views */,
+				F7F9AC122781FCFA00AADF34 /* Controllers */,
+				F7F9ABD62781B62E00AADF34 /* ExtensionDelegate.swift */,
+				F7F9ABDC2781B62F00AADF34 /* Assets.xcassets */,
+				F7F9ABDE2781B62F00AADF34 /* Info.plist */,
+				F7F9ABDF2781B62F00AADF34 /* PushNotificationPayload.apns */,
+			);
+			path = "PoltavaMonuments WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F7F9AC0B2781F17D00AADF34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9AC092781B6C600AADF34 /* MainTable.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7F9AC0E2781F36F00AADF34 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9AC0C2781F22700AADF34 /* NetworkManager.swift */,
+				F7C96093278307BD004CE775 /* ImageLoader.swift */,
+				F7C96098278319AD004CE775 /* ImageCache.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F7F9AC112781F95800AADF34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9AC0F2781F95000AADF34 /* Monument.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7F9AC122781FCFA00AADF34 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7F9ABD42781B62E00AADF34 /* InterfaceController.swift */,
+				F7F9ABD82781B62E00AADF34 /* NotificationController.swift */,
+				F7F9ABDA2781B62E00AADF34 /* ComplicationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7F9ABBC2781B62C00AADF34 /* PoltavaMonuments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7F9AC002781B62F00AADF34 /* Build configuration list for PBXNativeTarget "PoltavaMonuments" */;
+			buildPhases = (
+				F7F9ABBB2781B62C00AADF34 /* Resources */,
+				F7F9ABFF2781B62F00AADF34 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7F9ABC42781B62C00AADF34 /* PBXTargetDependency */,
+			);
+			name = PoltavaMonuments;
+			productName = PoltavaMonuments;
+			productReference = F7F9ABBD2781B62C00AADF34 /* PoltavaMonuments.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		F7F9ABC02781B62C00AADF34 /* PoltavaMonuments WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7F9ABFC2781B62F00AADF34 /* Build configuration list for PBXNativeTarget "PoltavaMonuments WatchKit App" */;
+			buildPhases = (
+				F7F9ABBF2781B62C00AADF34 /* Resources */,
+				F7F9ABFB2781B62F00AADF34 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7F9ABD22781B62E00AADF34 /* PBXTargetDependency */,
+			);
+			name = "PoltavaMonuments WatchKit App";
+			productName = "PoltavaMonuments WatchKit App";
+			productReference = F7F9ABC12781B62C00AADF34 /* PoltavaMonuments WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F7F9ABCE2781B62E00AADF34 /* PoltavaMonuments WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7F9ABF82781B62F00AADF34 /* Build configuration list for PBXNativeTarget "PoltavaMonuments WatchKit Extension" */;
+			buildPhases = (
+				F7F9ABCB2781B62E00AADF34 /* Sources */,
+				F7F9ABCC2781B62E00AADF34 /* Frameworks */,
+				F7F9ABCD2781B62E00AADF34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PoltavaMonuments WatchKit Extension";
+			productName = "PoltavaMonuments WatchKit Extension";
+			productReference = F7F9ABCF2781B62E00AADF34 /* PoltavaMonuments WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7F9ABB72781B62C00AADF34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F7F9ABBC2781B62C00AADF34 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F7F9ABC02781B62C00AADF34 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F7F9ABCE2781B62E00AADF34 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F7F9ABBA2781B62C00AADF34 /* Build configuration list for PBXProject "PoltavaMonuments" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7F9ABB62781B62C00AADF34;
+			productRefGroup = F7F9ABBE2781B62C00AADF34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7F9ABBC2781B62C00AADF34 /* PoltavaMonuments */,
+				F7F9ABC02781B62C00AADF34 /* PoltavaMonuments WatchKit App */,
+				F7F9ABCE2781B62E00AADF34 /* PoltavaMonuments WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7F9ABBB2781B62C00AADF34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7F9ABBF2781B62C00AADF34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7F9ABCA2781B62D00AADF34 /* Assets.xcassets in Resources */,
+				F7F9ABC82781B62C00AADF34 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7F9ABCD2781B62E00AADF34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7F9ABDD2781B62F00AADF34 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7F9ABCB2781B62E00AADF34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C96099278319AD004CE775 /* ImageCache.swift in Sources */,
+				F7F9AC0D2781F22700AADF34 /* NetworkManager.swift in Sources */,
+				F7F9AC0A2781B6C600AADF34 /* MainTable.swift in Sources */,
+				F7C96094278307BD004CE775 /* ImageLoader.swift in Sources */,
+				F7F9ABD92781B62E00AADF34 /* NotificationController.swift in Sources */,
+				F7F9ABDB2781B62E00AADF34 /* ComplicationController.swift in Sources */,
+				F7F9ABD72781B62E00AADF34 /* ExtensionDelegate.swift in Sources */,
+				F7F9AC102781F95000AADF34 /* Monument.swift in Sources */,
+				F7F9ABD52781B62E00AADF34 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F7F9ABC42781B62C00AADF34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7F9ABC02781B62C00AADF34 /* PoltavaMonuments WatchKit App */;
+			targetProxy = F7F9ABC32781B62C00AADF34 /* PBXContainerItemProxy */;
+		};
+		F7F9ABD22781B62E00AADF34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7F9ABCE2781B62E00AADF34 /* PoltavaMonuments WatchKit Extension */;
+			targetProxy = F7F9ABD12781B62E00AADF34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F7F9ABC62781B62C00AADF34 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7F9ABC72781B62C00AADF34 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7F9ABF62781B62F00AADF34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7F9ABF72781B62F00AADF34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7F9ABF92781B62F00AADF34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PoltavaMonuments WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PoltavaMonuments WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = savepoltava.PoltavaMonuments.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F7F9ABFA2781B62F00AADF34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PoltavaMonuments WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PoltavaMonuments WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = savepoltava.PoltavaMonuments.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F7F9ABFD2781B62F00AADF34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = PoltavaMonuments_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "PoltavaMonuments WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = savepoltava.PoltavaMonuments.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		F7F9ABFE2781B62F00AADF34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = PoltavaMonuments_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "PoltavaMonuments WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = savepoltava.PoltavaMonuments.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		F7F9AC012781B62F00AADF34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = savepoltava.PoltavaMonuments;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F7F9AC022781B62F00AADF34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = savepoltava.PoltavaMonuments;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7F9ABBA2781B62C00AADF34 /* Build configuration list for PBXProject "PoltavaMonuments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7F9ABF62781B62F00AADF34 /* Debug */,
+				F7F9ABF72781B62F00AADF34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7F9ABF82781B62F00AADF34 /* Build configuration list for PBXNativeTarget "PoltavaMonuments WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7F9ABF92781B62F00AADF34 /* Debug */,
+				F7F9ABFA2781B62F00AADF34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7F9ABFC2781B62F00AADF34 /* Build configuration list for PBXNativeTarget "PoltavaMonuments WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7F9ABFD2781B62F00AADF34 /* Debug */,
+				F7F9ABFE2781B62F00AADF34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7F9AC002781B62F00AADF34 /* Build configuration list for PBXNativeTarget "PoltavaMonuments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7F9AC012781B62F00AADF34 /* Debug */,
+				F7F9AC022781B62F00AADF34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7F9ABB72781B62C00AADF34 /* Project object */;
+}
