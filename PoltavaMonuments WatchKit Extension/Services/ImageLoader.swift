@@ -6,6 +6,7 @@
 //
 
 import WatchKit
+import Foundation
 
 final class ImageLoader {
     
@@ -23,27 +24,30 @@ final class ImageLoader {
         for urlString in urls {
             group.enter()
             
-            DispatchQueue.global().async { [unowned self] in
-                if let url = URL(string: urlString) {
-                    if let cacheImage = self.cache.load(for: url.absoluteString) {
-                        images.append(cacheImage)
-                    } else {
-                        do {
-                            let data = try Data(contentsOf: url)
-                            if let downloadImage = UIImage(data: data) {
-                                self.cache.save(for: url.absoluteString, downloadImage)
-                                images.append(downloadImage)
-                            }
-                        } catch {
-                            if let defaultImage = UIImage(named: "defaultImage") {
-                                images.append(defaultImage)
-                            }
-                            print("[dev] error fetch image: \(error.localizedDescription)")
-                        }
+            DispatchQueue.global().async {
+                guard let url = URL(string: urlString) else {
+                    if let defaultImage = UIImage(named: "AppIcon") {
+                        images.append(defaultImage)
                     }
+
+                    return
                 }
                 
-                group.leave()
+                URLSession.shared.dataTask(with: url) { data, _, error in
+                    guard error == nil else {
+                        print("[dev] error on loading: \(error)")
+                        if let defaultImage = UIImage(named: "AppIcon") {
+                            images.append(defaultImage)
+                        }
+                        return
+                    }
+                    guard let imageData = data else { return }
+
+                    if let image = UIImage(data: imageData) {
+                        images.append(image)
+                        group.leave()
+                    }
+                }.resume()
             }
         }
         
@@ -51,5 +55,4 @@ final class ImageLoader {
             completion(images)
         }
     }
-    
 }
