@@ -20,15 +20,18 @@ final class NetworkManager {
         baseUrlString = "https://monuments.pl.ua/api/monument"
         urlComponents = URLComponents(string: baseUrlString)
     }
-    //coordinate: CLLocationCoordinate2D
-    func requestImageUrls(completion: @escaping (([String]?) -> Void)) {
+    
+    func requestImageUrls(location: CLLocationCoordinate2D, completion: @escaping (([String]?) -> Void)) {
         guard var urlComponents = urlComponents else { return }
+        
+        let lat = String(location.latitude)
+        let lon = String(location.longitude)
         
         urlComponents.queryItems = [
             URLQueryItem(name: "pageSize", value: "10"),
             URLQueryItem(name: "pageNumber", value: "1"),
-            URLQueryItem(name: "CurrentPosition.Latitude", value: "49.589341"),
-            URLQueryItem(name: "CurrentPosition.Longitude", value: "34.554491"),
+            URLQueryItem(name: "CurrentPosition.Latitude", value: lat),
+            URLQueryItem(name: "CurrentPosition.Longitude", value: lon),
             URLQueryItem(name: "SortBy", value: "DISTANCE")
         ]
         
@@ -44,6 +47,7 @@ final class NetworkManager {
             
             do {
                 let monumentsResponse = try JSONDecoder().decode([MonumentResponse].self, from: data)
+//                monumentsResponse.forEach { print("[dev] \($0.majorPhotoImageUrl)") }
                 let urls: [String] = monumentsResponse.flatMap { $0.monumentPhotos.map { $0.url }}
                 completion(urls)
             } catch {
