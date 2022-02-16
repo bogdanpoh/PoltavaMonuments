@@ -12,6 +12,7 @@ class MainTable: NSObject {
     // MARK: - UI
     
     @IBOutlet weak var rowImage: WKInterfaceImage!
+    @IBOutlet weak var rowLabel: WKInterfaceLabel!
     
 }
 
@@ -21,6 +22,10 @@ extension MainTable {
     
     func set(image: UIImage?) {
         rowImage.setImage(image)
+    }
+    
+    func set(text: String) {
+        rowLabel.setText(text)
     }
     
 }
