@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38"/>
+    <device id="watch44"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
@@ -14,11 +14,17 @@
                         <table alignment="left" id="dYd-If-0Ii">
                             <items>
                                 <tableRow identifier="MyRow" id="JVt-SU-IHm" customClass="MainTable" customModule="PoltavaMonuments_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="100" alignment="left" layout="vertical" id="05t-aV-ggR">
+                                    <group key="rootItem" width="1" height="120" alignment="left" layout="overlap" id="05t-aV-ggR">
                                         <items>
-                                            <imageView width="1" height="73" alignment="left" contentMode="scaleAspectFit" id="qbE-GW-CRZ"/>
-                                            <label width="1" alignment="left" text="Label" minimumScaleFactor="0.20000000000000001" id="aZu-K9-shD"/>
+                                            <imageView width="1" height="1" alignment="left" id="qbE-GW-CRZ"/>
+                                            <button width="1" widthAdjustment="-20" alignment="center" verticalAlignment="bottom" alpha="0.29999999999999999" enabled="NO" id="Q9E-5V-QJy">
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </button>
+                                            <label width="1" widthAdjustment="1" height="50" alignment="left" verticalAlignment="bottom" text="Label" textAlignment="center" numberOfLines="2" minimumScaleFactor="0.20000000000000001" id="aZu-K9-shD">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
                                         </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
                                         <outlet property="rowImage" destination="qbE-GW-CRZ" id="tMa-U0-L8o"/>

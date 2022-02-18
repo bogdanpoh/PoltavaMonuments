@@ -9,7 +9,7 @@ import WatchKit
 
 class MainTable: NSObject {
     
-    // MARK: - UI
+    // MARK: - @IBOutlets
     
     @IBOutlet weak var rowImage: WKInterfaceImage!
     @IBOutlet weak var rowLabel: WKInterfaceLabel!

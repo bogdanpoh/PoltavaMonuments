@@ -20,10 +20,10 @@ final class ImageLoader {
     func loadImages(from urls: [String], completion: @escaping (([UIImage]) -> Void)) {
         let group = DispatchGroup()
         var images = [UIImage]()
-        
+
         for urlString in urls {
             group.enter()
-            
+
             DispatchQueue.global().async {
                 guard let url = URL(string: urlString) else {
                     if let defaultImage = UIImage(named: "AppIcon") {
@@ -32,7 +32,7 @@ final class ImageLoader {
 
                     return
                 }
-                
+
                 URLSession.shared.dataTask(with: url) { data, _, error in
                     guard error == nil else {
                         print("[dev] error on loading: \(error)")
@@ -50,7 +50,7 @@ final class ImageLoader {
                 }.resume()
             }
         }
-        
+
         group.notify(queue: .main) {
             completion(images)
         }

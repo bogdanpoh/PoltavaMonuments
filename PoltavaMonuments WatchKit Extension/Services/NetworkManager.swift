@@ -21,7 +21,7 @@ final class NetworkManager {
         urlComponents = URLComponents(string: baseUrlString)
     }
     
-    func requestImageUrls(location: CLLocationCoordinate2D, completion: @escaping (([String]?) -> Void)) {
+    func requestImageUrls(location: CLLocationCoordinate2D, completion: @escaping ((Result<[MonumentResponse], Error>) -> Void)) {
         guard var urlComponents = urlComponents else { return }
         
         let lat = String(location.latitude)
@@ -40,19 +40,19 @@ final class NetworkManager {
         request.httpMethod = "GET"
         
         let session = URLSession.shared.dataTask(with: request) { (data, _, error) in
-            guard error == nil, let data = data else {
-                completion(nil)
+            guard error == nil else {
+                completion(.failure(error!))
                 return
             }
             
+            guard let data = data else { return }
+            
             do {
                 let monumentsResponse = try JSONDecoder().decode([MonumentResponse].self, from: data)
-//                monumentsResponse.forEach { print("[dev] \($0.majorPhotoImageUrl)") }
-                let urls: [String] = monumentsResponse.flatMap { $0.monumentPhotos.map { $0.url }}
-                completion(urls)
+                completion(.success(monumentsResponse))
             } catch {
                 print("[dev] error fetch response: \(error.localizedDescription)")
-                completion(nil)
+                completion(.failure(error))
             }
         }
         
