@@ -6,6 +6,38 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
     <scenes>
+        <!--MonumentController-->
+        <scene sceneID="wGZ-jP-UHD">
+            <objects>
+                <controller identifier="MonumentController" id="CBp-uO-4yG" customClass="MonumentController" customModule="PoltavaMonuments_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="KLU-jM-4dG">
+                            <items>
+                                <tableRow identifier="MonumentRow" selectable="NO" id="kSJ-Kr-7EB" customClass="MonumentTable" customModule="PoltavaMonuments_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="150" alignment="left" layout="overlap" id="LZd-OZ-kLk">
+                                        <items>
+                                            <imageView width="1" height="1" alignment="left" id="uP5-LH-Fky"/>
+                                            <label width="1" widthAdjustment="-8" height="1" heightAdjustment="-3" alignment="center" text="Label" numberOfLines="0" minimumScaleFactor="0.20000000000000001" id="Ikr-7I-z2J">
+                                                <fontDescription key="font" type="system" pointSize="8"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="monumentDescriptionLabel" destination="Ikr-7I-z2J" id="Bqy-Ox-GMG"/>
+                                        <outlet property="monumentImage" destination="uP5-LH-Fky" id="gKP-OA-n0F"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="monumentTable" destination="KLU-jM-4dG" id="DpZ-zG-dYc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="199" y="159"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
@@ -39,7 +71,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="22" y="318"/>
+            <point key="canvasLocation" x="-33" y="159"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

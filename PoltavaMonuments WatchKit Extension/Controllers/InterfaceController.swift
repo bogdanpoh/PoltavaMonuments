@@ -20,7 +20,7 @@ class InterfaceController: WKInterfaceController {
         guard monuments == nil else { return }
         let locationManager = LocationManager()
         
-        NetworkManager.shared.requestImageUrls(location: locationManager.currentLocation.coordinate) { [weak self] responseResult in
+        NetworkManager.shared.requestMonuments(location: locationManager.currentLocation.coordinate) { [weak self] responseResult in
             switch responseResult {
             case .success(let monuments):
                 self?.monuments = monuments
@@ -34,7 +34,7 @@ class InterfaceController: WKInterfaceController {
     
     // MARK: - Private
     
-    private var monuments: [MonumentResponse]?
+    private var monuments: [Monument]?
     
 }
 
@@ -45,8 +45,13 @@ extension InterfaceController {
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         super.table(table, didSelectRowAt: rowIndex)
         guard let monuments = monuments else { return }
-
-        print("[dev] \(monuments[rowIndex].name)")
+        
+        let monument = monuments[rowIndex]
+        let monumentId = monument.id
+        let monumentTitle = monument.name
+        let monumentContext = MonumentController.MonumentContext(id: monumentId, title: monumentTitle)
+        
+        pushController(withName: "MonumentController", context: monumentContext)
     }
     
 }
@@ -55,7 +60,7 @@ extension InterfaceController {
 
 private extension InterfaceController {
     
-    func setupTable(_ monuments: [MonumentResponse]) {
+    func setupTable(_ monuments: [Monument]) {
         table.setNumberOfRows(monuments.count, withRowType: "MyRow")
         
         for (index, monument) in monuments.enumerated() {

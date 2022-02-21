@@ -21,7 +21,7 @@ final class NetworkManager {
         urlComponents = URLComponents(string: baseUrlString)
     }
     
-    func requestImageUrls(location: CLLocationCoordinate2D, completion: @escaping ((Result<[MonumentResponse], Error>) -> Void)) {
+    func requestMonuments(location: CLLocationCoordinate2D, completion: @escaping ((Result<[Monument], Error>) -> Void)) {
         guard var urlComponents = urlComponents else { return }
         
         let lat = String(location.latitude)
@@ -39,7 +39,7 @@ final class NetworkManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        let session = URLSession.shared.dataTask(with: request) { (data, _, error) in
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
             guard error == nil else {
                 completion(.failure(error!))
                 return
@@ -48,15 +48,39 @@ final class NetworkManager {
             guard let data = data else { return }
             
             do {
-                let monumentsResponse = try JSONDecoder().decode([MonumentResponse].self, from: data)
-                completion(.success(monumentsResponse))
+                let monuments = try JSONDecoder().decode([Monument].self, from: data)
+                completion(.success(monuments))
             } catch {
                 print("[dev] error fetch response: \(error.localizedDescription)")
                 completion(.failure(error))
             }
-        }
+        }.resume()
+    }
+    
+    func requestMonument(id: Int, completion: @escaping ((Result<Monument, Error>) -> Void)) {
+        guard let urlComponents = urlComponents else { return }
+        guard let baseUrl = urlComponents.url else { return }
+        guard let url = URL(string: baseUrl.absoluteString + "/\(id)") else { return }
         
-        session.resume()
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            guard error == nil else {
+                completion(.failure(error!))
+                return
+            }
+            
+            guard let data = data else { return }
+            
+            do {
+                let monument = try JSONDecoder().decode(Monument.self, from: data)
+                completion(.success(monument))
+            } catch {
+                print("[dev] error fetch response: \(error.localizedDescription)")
+                completion(.failure(error))
+            }
+        }.resume()
     }
     
 }

@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct MonumentResponse: Decodable {
+struct Monument: Decodable {
     let id: Int
     let year: Int
     let period: Int
     let name: String
+    let description: String?
     let cityId: Int
     let statusId: Int
     let conditionId: Int
@@ -26,7 +27,7 @@ struct MonumentResponse: Decodable {
     let createdAt: String
     let updatedAt: String
     let condition: Condition
-    let monumentPhotos: [Monument]
+    let monumentPhotos: [MonumentPhoto]
     let tags: [String]
     let destroyYear: Int?
     let destroyPeriod: Int?
@@ -37,7 +38,7 @@ struct Condition: Decodable {
     let abbreviation: String
 }
 
-struct Monument: Decodable {
+struct MonumentPhoto: Decodable {
     let id: Int
     let photoId: Int
     let majorPhoto: Bool

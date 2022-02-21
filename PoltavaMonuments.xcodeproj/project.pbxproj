@@ -11,6 +11,8 @@
 		F7BD43282795BE69008596AB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD43272795BE69008596AB /* LocationManager.swift */; };
 		F7C96094278307BD004CE775 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C96093278307BD004CE775 /* ImageLoader.swift */; };
 		F7C96099278319AD004CE775 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C96098278319AD004CE775 /* ImageCache.swift */; };
+		F7CEB82327C37BE700E94770 /* MonumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CEB82227C37BE700E94770 /* MonumentController.swift */; };
+		F7CEB82527C38C4A00E94770 /* MonumentTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CEB82427C38C4A00E94770 /* MonumentTable.swift */; };
 		F7F9ABC22781B62C00AADF34 /* PoltavaMonuments WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F7F9ABC12781B62C00AADF34 /* PoltavaMonuments WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F7F9ABC82781B62C00AADF34 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F9ABC62781B62C00AADF34 /* Interface.storyboard */; };
 		F7F9ABCA2781B62D00AADF34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7F9ABC92781B62D00AADF34 /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		F7BD43272795BE69008596AB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F7C96093278307BD004CE775 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		F7C96098278319AD004CE775 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		F7CEB82227C37BE700E94770 /* MonumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonumentController.swift; sourceTree = "<group>"; };
+		F7CEB82427C38C4A00E94770 /* MonumentTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonumentTable.swift; sourceTree = "<group>"; };
 		F7F9ABBD2781B62C00AADF34 /* PoltavaMonuments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoltavaMonuments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F9ABC12781B62C00AADF34 /* PoltavaMonuments WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PoltavaMonuments WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F9ABC72781B62C00AADF34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				F7F9AC092781B6C600AADF34 /* MainTable.swift */,
+				F7CEB82427C38C4A00E94770 /* MonumentTable.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				F7F9ABD42781B62E00AADF34 /* InterfaceController.swift */,
 				F7F9ABD82781B62E00AADF34 /* NotificationController.swift */,
 				F7F9ABDA2781B62E00AADF34 /* ComplicationController.swift */,
+				F7CEB82227C37BE700E94770 /* MonumentController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,8 +328,10 @@
 				F7F9AC0A2781B6C600AADF34 /* MainTable.swift in Sources */,
 				F71C698D27BDA6F70068C0B0 /* UIImage+Extensions.swift in Sources */,
 				F7C96094278307BD004CE775 /* ImageLoader.swift in Sources */,
+				F7CEB82327C37BE700E94770 /* MonumentController.swift in Sources */,
 				F7F9ABD92781B62E00AADF34 /* NotificationController.swift in Sources */,
 				F7F9ABDB2781B62E00AADF34 /* ComplicationController.swift in Sources */,
+				F7CEB82527C38C4A00E94770 /* MonumentTable.swift in Sources */,
 				F7F9ABD72781B62E00AADF34 /* ExtensionDelegate.swift in Sources */,
 				F7F9AC102781F95000AADF34 /* Monument.swift in Sources */,
 				F7F9ABD52781B62E00AADF34 /* InterfaceController.swift in Sources */,
