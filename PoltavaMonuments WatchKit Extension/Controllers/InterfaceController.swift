@@ -68,8 +68,8 @@ private extension InterfaceController {
                 controller.set(text: monument.name)
                 controller.set(image: .placeholder)
                 
-                ImageLoader.shared.loadImages(from: [monument.majorPhotoImageUrl]) { images in
-                    controller.set(image: images.first)
+                ImageLoader.shared.loadImage(url: monument.majorPhotoImageUrl) { image in
+                    controller.set(image: image)
                 }
             }
         }

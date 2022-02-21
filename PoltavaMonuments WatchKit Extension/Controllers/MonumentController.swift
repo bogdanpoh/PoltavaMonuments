@@ -65,11 +65,10 @@ private extension MonumentController {
                     controller.set(title: monument.description)
                 } else {
                     let photoUrl = monumentPhotos[index - 1].url
-                    
                     controller.set(image: .placeholder)
                     
-                    ImageLoader.shared.loadImages(from: [photoUrl]) { images in
-                        controller.set(image: images.first)
+                    ImageLoader.shared.loadImage(url: photoUrl) { image in
+                        controller.set(image: image)
                     }
                 }
             }
