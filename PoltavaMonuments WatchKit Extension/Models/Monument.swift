@@ -23,7 +23,6 @@ struct Monument: Decodable {
     let majorPhotoImageUrl: String
     let protectionNumber: String
     let slug: String
-    let isEasterEgg: Bool
     let createdAt: String
     let updatedAt: String
     let condition: Condition
