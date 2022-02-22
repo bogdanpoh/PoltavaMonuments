@@ -67,8 +67,8 @@ private extension MonumentController {
                     let photoUrl = monumentPhotos[index - 1].url
                     controller.set(image: .placeholder)
                     
-                    ImageLoader.shared.loadImage(url: photoUrl) { image in
-                        controller.set(image: image)
+                    ImageLoader.shared.loadImage(url: photoUrl) { [weak controller] image in
+                        controller?.set(image: image)
                     }
                 }
             }

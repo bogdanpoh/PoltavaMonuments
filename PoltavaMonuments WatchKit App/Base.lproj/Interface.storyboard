@@ -55,10 +55,19 @@
                                             <label width="1" widthAdjustment="1" height="50" alignment="left" verticalAlignment="bottom" text="Label" textAlignment="center" numberOfLines="2" minimumScaleFactor="0.20000000000000001" id="aZu-K9-shD">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             </label>
+                                            <group width="1" widthAdjustment="-6" height="1" heightAdjustment="-6" alignment="left" verticalAlignment="center" layout="overlap" id="caa-yX-HfC">
+                                                <items>
+                                                    <button height="20" alignment="right" hidden="YES" title="Button" enabled="NO" id="vKl-Mo-FoP">
+                                                        <color key="backgroundColor" red="0.86274509803921573" green="0.039215686274509803" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                                    </button>
+                                                </items>
+                                            </group>
                                         </items>
                                         <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
+                                        <outlet property="badgeButton" destination="vKl-Mo-FoP" id="gbb-f0-P7q"/>
                                         <outlet property="rowImage" destination="qbE-GW-CRZ" id="tMa-U0-L8o"/>
                                         <outlet property="rowLabel" destination="aZu-K9-shD" id="tN4-14-ppZ"/>
                                     </connections>
@@ -71,7 +80,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-33" y="159"/>
+            <point key="canvasLocation" x="-33.260869565217391" y="158.61607142857144"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

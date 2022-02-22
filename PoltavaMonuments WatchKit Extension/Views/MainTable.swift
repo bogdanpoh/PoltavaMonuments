@@ -11,8 +11,9 @@ class MainTable: NSObject {
     
     // MARK: - @IBOutlets
     
-    @IBOutlet weak var rowImage: WKInterfaceImage!
-    @IBOutlet weak var rowLabel: WKInterfaceLabel!
+    @IBOutlet private weak var rowImage: WKInterfaceImage!
+    @IBOutlet private weak var rowLabel: WKInterfaceLabel!
+    @IBOutlet private weak var badgeButton: WKInterfaceButton!
     
 }
 
@@ -26,6 +27,11 @@ extension MainTable {
     
     func set(text: String) {
         rowLabel.setText(text)
+    }
+    
+    func setBadge(text: String?) {
+        badgeButton.setHidden(false)
+        badgeButton.setTitle(text)
     }
     
 }
