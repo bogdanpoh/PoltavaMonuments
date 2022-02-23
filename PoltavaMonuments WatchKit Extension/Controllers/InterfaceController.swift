@@ -31,8 +31,9 @@ class InterfaceController: WKInterfaceController {
         NetworkManager.shared.requestMonuments(coordinate: locationManager.currentLocation.coordinate) { [weak self] responseResult in
             switch responseResult {
             case .success(let monuments):
-                self?.monuments = monuments
-                self?.setupTable(monuments)
+                let filteredMonuments = monuments.filter({ !$0.tags.contains("easter_egg") })
+                self?.monuments = filteredMonuments
+                self?.setupTable(filteredMonuments)
                 
             case .failure(let error):
                 print("[dev] error: \(error)")
@@ -69,10 +70,9 @@ extension InterfaceController {
 private extension InterfaceController {
     
     func setupTable(_ monuments: [Monument]) {
-        let filteredMonuments = monuments.filter({ !$0.tags.contains("easter_egg") })
-        table.setNumberOfRows(filteredMonuments.count, withRowType: "MyRow")
+        table.setNumberOfRows(monuments.count, withRowType: "MyRow")
         
-        for (index, monument) in filteredMonuments.enumerated() {
+        for (index, monument) in monuments.enumerated() {
             if let controller = table.rowController(at: index) as? MainTable {
                 controller.set(text: monument.name)
                 controller.set(image: .placeholder)
