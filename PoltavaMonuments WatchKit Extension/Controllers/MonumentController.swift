@@ -55,16 +55,28 @@ class MonumentController: WKInterfaceController {
 private extension MonumentController {
     
     func setupTable(monument: Monument) {
+        let addictionCellCount = 2
         let monumentPhotos = monument.monumentPhotos
-        let cellCount = monumentPhotos.count + 1
-        monumentTable.setNumberOfRows(cellCount, withRowType: "MonumentRow")
+        var rowTypes = Array(repeating: "MonumentRow", count: monumentPhotos.count + 1)
+        rowTypes.insert("ConditionRow", at: 0)
+        monumentTable.setRowTypes(rowTypes)
+        let cellCount = monumentPhotos.count + addictionCellCount
         
         for index in 0...cellCount {
-            if let controller = monumentTable.rowController(at: index) as? MonumentTable {
-                if index == 0 {
+            if index == 0 {
+                if let controller = monumentTable.rowController(at: index) as? ConditionRow {
+                    let conditionStatus = UserDefaults.standard.string(forKey: monument.condition.abbreviation)
+                    
+                    controller.set(backgroundColor: monument.condition.status.color)
+                    controller.set(title: conditionStatus ?? monument.condition.abbreviation)
+                }
+            } else if index == 1 {
+                if let controller = monumentTable.rowController(at: index) as? MonumentTable {
                     controller.set(title: monument.description)
-                } else {
-                    let photoUrl = monumentPhotos[index - 1].url
+                }
+            } else if index > 1 {
+                if let controller = monumentTable.rowController(at: index) as? MonumentTable {
+                    let photoUrl = monumentPhotos[index - addictionCellCount].url
                     controller.set(image: .placeholder)
                     
                     ImageLoader.shared.loadImage(url: photoUrl) { [weak controller] image in

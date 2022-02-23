@@ -13,6 +13,20 @@
                     <items>
                         <table alignment="left" id="KLU-jM-4dG">
                             <items>
+                                <tableRow identifier="ConditionRow" selectable="NO" id="VmM-kh-qed" customClass="ConditionRow" customModule="PoltavaMonuments_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="0lE-2A-exI">
+                                        <items>
+                                            <label width="1" widthAdjustment="-8" height="1" heightAdjustment="-8" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="8RA-pl-rEu">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="statusGroup" destination="0lE-2A-exI" id="h6m-vh-MDc"/>
+                                        <outlet property="statusLabel" destination="8RA-pl-rEu" id="5dL-As-fdl"/>
+                                    </connections>
+                                </tableRow>
                                 <tableRow identifier="MonumentRow" selectable="NO" id="kSJ-Kr-7EB" customClass="MonumentTable" customModule="PoltavaMonuments_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="150" alignment="left" layout="overlap" id="LZd-OZ-kLk">
                                         <items>

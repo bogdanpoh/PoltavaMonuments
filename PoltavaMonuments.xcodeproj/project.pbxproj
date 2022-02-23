@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F71C698D27BDA6F70068C0B0 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71C698C27BDA6F70068C0B0 /* UIImage+Extensions.swift */; };
+		F79A478A27C53D810012146D /* ConditionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A478927C53D810012146D /* ConditionRow.swift */; };
 		F7BD43282795BE69008596AB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BD43272795BE69008596AB /* LocationManager.swift */; };
 		F7C96094278307BD004CE775 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C96093278307BD004CE775 /* ImageLoader.swift */; };
 		F7C96099278319AD004CE775 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C96098278319AD004CE775 /* ImageCache.swift */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		F71C698C27BDA6F70068C0B0 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		F79A478927C53D810012146D /* ConditionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionRow.swift; sourceTree = "<group>"; };
 		F7BD43272795BE69008596AB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F7C96093278307BD004CE775 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		F7C96098278319AD004CE775 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				F7F9AC092781B6C600AADF34 /* MainTable.swift */,
 				F7CEB82427C38C4A00E94770 /* MonumentTable.swift */,
+				F79A478927C53D810012146D /* ConditionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				F7C96094278307BD004CE775 /* ImageLoader.swift in Sources */,
 				F7CEB82327C37BE700E94770 /* MonumentController.swift in Sources */,
 				F7F9ABD92781B62E00AADF34 /* NotificationController.swift in Sources */,
+				F79A478A27C53D810012146D /* ConditionRow.swift in Sources */,
 				F7F9ABDB2781B62E00AADF34 /* ComplicationController.swift in Sources */,
 				F7CEB82527C38C4A00E94770 /* MonumentTable.swift in Sources */,
 				F7F9ABD72781B62E00AADF34 /* ExtensionDelegate.swift in Sources */,
